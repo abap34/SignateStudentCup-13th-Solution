@@ -1,0 +1,11 @@
+max_seq_length: 512
+# max_seq_lengthを大きくしたらPublic scoreが大きく上昇したのでこのまま行きましたが, Private scoreにはあまり寄与していませんでした。。。。。。本質を理解せずにガチャを回してしまった.........
+train_batch_size: 16
+eval_batch_size: 16
+# 基本的にメモリに乗るギリギリです。Google Colabでは動作しました。(ただし、xlnetに関してはどちらも8にしています)
+num_train_epochs: 1
+learning_rate: 0.00001
+# BERT以外のモデルではこれより大きいと学習が不安定になりました。
+manual_seed : 99
+overwrite_output_dir : True
+save_model_every_epoch : False
